@@ -1,0 +1,20 @@
+{
+  "verified_date": "2026-11-23",
+  "github_free": {
+    "repos": "unlimited public/private", "commercial_ok": true,
+    "private_linux_ci_min_mo": 2000, "public_ci": "unlimited"
+  },
+  "supabase_free": {
+    "max_active_projects": 2, "shared_slot_1": "shippulse-dev",
+    "postgres_mb": 500, "auth_mau": 50000, "egress_gb_mo": 5,
+    "storage_gb": 1, "inactivity_pause_days": 7
+  },
+  "vercel_hobby": {
+    "transfer_gb_mo": 100, "fn_invocations_mo": 1000000,
+    "pr_preview_urls": true, "commercial_ok": false
+  },
+  "cloudflare_free": {
+    "pages_static_bw": "unlimited", "workers_req_per_day": 100000,
+    "worker_cpu_ms": 10, "commercial_ok": true
+  }
+}
