@@ -6,6 +6,17 @@
   "scripts": {
     "dev": "node src/server.mjs",
     "test": "node --test test/*.test.mjs",
-    "stack:check": "node scripts/stack-check.mjs"
+    "stack:check": "node scripts/stack-check.mjs",
+    "typecheck": "tsc --noEmit",
+    "db:types": "supabase gen types typescript --remote --schema public > src/lib/database.types.ts && oxfmt src/lib/database.types.ts",
+    "auth:verify": "node scripts/verify-auth-flow.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.80.0",
+    "supabase": "^3.3.0",
+    "typescript": "^7.0.2"
   }
 }
