@@ -9,3 +9,5 @@ logs/
 *.log
 supabase/.temp/
 .agents/mcp_config.json
+edge-worker/.wrangler/
+edge-worker/node_modules/
