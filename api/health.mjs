@@ -10,7 +10,7 @@ export function buildHealth(urlStr, env = process.env) {
     env: env.APP_ENV || env.VERCEL_ENV || "preview",
     hostTarget: env.HOST_TARGET || "vercel-hobby",
     supabaseReady: ready, recommendedHost: pol.recommendedHost,
-    coldWakeAware: true,
+    coldWakeAware: true, region: env.VERCEL_REGION || "iad1",
   };
   return { status: paused ? 503 : 200, body };
 }
