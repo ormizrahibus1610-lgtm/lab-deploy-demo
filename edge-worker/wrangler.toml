@@ -1,0 +1,9 @@
+name = "lab-deploy-edge"
+main = "src/index.js"
+compatibility_date = "2026-11-22"
+workers_dev = true
+
+[vars]
+APP_ENV = "production"
+HOST_TARGET = "cloudflare-free"
+FREE_DAILY_LIMIT = "100000"
