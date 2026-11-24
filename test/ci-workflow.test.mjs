@@ -29,3 +29,10 @@ test("ci.yml gates deploy strictly to push on main after verify", () => {
   assert.match(ciYml, /github\.ref == 'refs\/heads\/main'/);
   assert.match(ciYml, /vars\.ENABLE_AUTO_DEPLOY == 'true'/);
 });
+
+test("api/health.mjs defaults region tag to iad1 when unset", () => {
+  const url = "https://prev.vercel.app/api/health";
+  const res = buildHealth(url, { APP_ENV: "preview" });
+  assert.equal(res.status, 200);
+  assert.equal(res.body.region, "iad1");
+});
