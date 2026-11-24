@@ -11,7 +11,9 @@
     "db:types": "supabase gen types typescript --remote --schema public > src/lib/database.types.ts && oxfmt src/lib/database.types.ts",
     "auth:verify": "node scripts/verify-auth-flow.mjs",
     "rls:audit": "node scripts/rls-audit.mjs",
-    "security:check": "node scripts/secret-scan.mjs"
+    "security:check": "node scripts/secret-scan.mjs",
+    "deploy:check": "node scripts/ci-deploy-check.mjs",
+    "verify:ci": "npm run typecheck && npm run security:check && npm test && npm run deploy:check"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.2"
